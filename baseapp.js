@@ -7,16 +7,18 @@ import job from "./jobs.json";
 import "./styles/App.css";
 import "./styles/bootstrap.min.css"
 
-//sets the state to default values
+//sets state to 0 or empty
 class App extends Component {
   state = {
     job,
     jobsClicked: [],
     status: "Welcome, Warrior of Light. Click on any icon to begin!",
     score: 0,
+    topScore: 0,
+
   };
 
-  //event when the job icon is clicked. Property set on the JobCard component
+  //when you click on a card ... the job is taken out of the array
   imageClick = event => {
     this.setState({
       status: "Good luck."
@@ -26,18 +28,19 @@ class App extends Component {
     const repeatedClick =
       this.state.jobsClicked.indexOf(currentJob) > -1;
 
-    //if you click on a job that has already been selected, the game is reset and the job icons are reordered
+    //if you click on a job that has already been selected, the game is reset and cards reordered
     if (repeatedClick) {
       this.setState({
         job: this.state.job.sort(function (a, b) {
           return 0.5 - Math.random();
         }),
+        topScore = score,
         status: "You lose! Click to play again.",
         jobsClicked: [],
         score: 0
       });
 
-      //else conditional when you click an icon you haven't clicked already
+      //if you click on an available job, your score is increased and cards reordered
     } else {
       this.setState(
         {
@@ -49,7 +52,6 @@ class App extends Component {
           ),
           score: this.state.score + 1
         },
-        //victory condition if all job icons were clicked without repeated clicks on a single icon
           () => {
           if (this.state.score === 15) {
             this.setState({
@@ -65,7 +67,7 @@ class App extends Component {
       );
     }
   };
-//renders the main page
+
   render() {
     return (
       <div>

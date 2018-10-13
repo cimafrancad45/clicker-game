@@ -1,0 +1,78 @@
+[
+    {
+      "id": 1,
+      "image": "PLD.png",
+      "clicked": false
+    },
+    {
+      "id": 2,
+      "image": "WAR.png",
+      "clicked": false    
+    },
+    {
+      "id": 3,
+      "image": "DRK.png",
+      "clicked": false
+    },
+    {
+      "id": 4,
+      "image": "WHM.png",
+      "clicked": false 
+    },
+    {
+      "id": 5,
+      "image": "SCH.png",
+      "clicked": false
+    },
+    {
+      "id": 6,
+      "image": "AST.png",
+      "clicked": false
+    },
+    {
+      "id": 7,
+      "image": "DRG.png",
+      "clicked": false
+    },
+    {
+      "id": 8,
+      "image": "MNK.png",
+      "clicked": false
+    },
+    {
+      "id": 9,
+      "image": "NIN.png",
+      "clicked": false
+    },
+    {
+      "id": 10,
+      "image": "SAM.png",
+      "clicked": false
+    },
+    {
+      "id": 11,
+      "image": "BRD.png",
+      "clicked": false
+    },
+    {
+      "id": 12,
+      "image": "MCH.png",
+      "clicked": false
+    },
+    {
+      "id": 13,
+      "image": "BLM.png",
+      "clicked": false
+    },
+    {
+      "id": 14,
+      "image": "SMN.png",
+      "clicked": false
+    },
+    {
+      "id": 15,
+      "image": "RDM.png",
+      "clicked": false
+    }
+  ]
+  
