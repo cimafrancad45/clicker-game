@@ -23,11 +23,11 @@ class App extends Component {
     });
 
     const currentJob = event.target.alt;
-    const repeatedClick =
-      this.state.jobsClicked.indexOf(currentJob) > -1;
+    //returns a boolean result based on if the value of currentJob is in the state of the jobsClicked. If true, activates the losing conditional.
+    const repeatedClick = this.state.jobsClicked.indexOf(currentJob) > -1;
 
     //if you click on a job that has already been selected, the game is reset and the job icons are reordered
-    if (repeatedClick) {
+    if (repeatedClick === true) {
       this.setState({
         job: this.state.job.sort(function (a, b) {
           return 0.5 - Math.random();
